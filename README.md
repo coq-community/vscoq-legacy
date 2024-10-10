@@ -6,7 +6,7 @@
 [![Available on the Open VSX marketplace][open-vsx-shield]][open-vsx-link] -->
 
 <!-- [travis-shield]: https://travis-ci.com/coq-community/vscoq.svg?branch=master
-[travis-link]: https://travis-ci.com/coq-community/vscoq/builds -->
+[travis-link]: https://travis-ci.com/coq-community/vscoq-legacy/builds -->
 
 [contributing-shield]: https://img.shields.io/badge/contributions-welcome-%23f7931e.svg
 [contributing-link]: https://github.com/coq-community/manifesto/blob/master/CONTRIBUTING.md

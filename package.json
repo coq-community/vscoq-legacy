@@ -23,9 +23,9 @@
     "theorem prover",
     "proof assistant"
   ],
-  "readme": "https://github.com/coq-community/vscoq/blob/vscoq1/README.md",
-  "bugs": "https://github.com/coq-community/vscoq/issues",
-  "homepage": "https://github.com/coq-community/vscoq/blob/vscoq1/README.md",
+  "readme": "https://github.com/coq-community/vscoq-legacy/blob/main/README.md",
+  "bugs": "https://github.com/coq-community/vscoq-legacy/issues",
+  "homepage": "https://github.com/coq-community/vscoq-legacy/blob/main/README.md",
   "activationEvents": [
     "onLanguage:coq"
   ],
@@ -831,7 +831,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/coq-community/vscoq.git"
+    "url": "https://github.com/coq-community/vscoq-legacy.git"
   },
   "devDependencies": {
     "@types/diff": "^4.0.2",
