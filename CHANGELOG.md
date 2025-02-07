@@ -1,3 +1,5 @@
+## 0.5.0
+*  compatible with rcoq9 + coq package (#57 by @thery)
 ## 0.4.1
 * Change in the xml-protocol (#811 by @thery)
 ## 0.4.0
