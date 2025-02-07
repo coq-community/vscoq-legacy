@@ -227,6 +227,10 @@ export class CoqTop extends IdeSlave8 implements coqtop.CoqTop {
     }
     if (semver.satisfies(this.coqtopVersion, ">= 8.9")) {
       var coqtopModule = this.coqidetopBin;
+      if (semver.satisfies(this.coqtopVersion, ">= 9.0")) {
+        // with rocq not .opt
+        coqtopModule = coqtopModule.replace(/(.opt)$/, '');
+      }
       // var coqtopModule = 'cmd';
       var args = [
         // '/D /C', this.coqPath + '/coqtop.exe',

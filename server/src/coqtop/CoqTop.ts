@@ -102,7 +102,7 @@ export function detectVersion(coqtopModule: string, cwd: string, console?: {log:
       });
 
       coqtop.on('close', () => {
-        const ver = /^\s*The Coq Proof Assistant, version (.+?)\s/.exec(result);
+        const ver = /^\s*The (?:Coq Proof Assistant|Rocq Prover), version (.+?)\s/.exec(result);
         // if(!ver)
         //   console.warn('Could not detect coqtop version');
         resolve(!ver ? undefined : ver[1]);
