@@ -91,10 +91,10 @@ export interface EventCallbacks {
 
 export function detectVersion(coqtopModule: string, cwd: string, console?: {log: (string)=>void, warn: (string)=>void}) : Promise<string|null> {
   if(console)
-    console.log('exec: ' + coqtopModule + ' -v');
+    console.log('exec: ' + coqtopModule + ' --print-version');
   return new Promise<string>((resolve,reject) => {
     try {
-      const coqtop = spawn(coqtopModule, ['-v'], {detached: false, cwd: cwd});
+      const coqtop = spawn(coqtopModule, ['--print-version'], {detached: false, cwd: cwd});
       let result = "";
 
       coqtop.stdout.on('data', (data:string) => {
@@ -102,7 +102,7 @@ export function detectVersion(coqtopModule: string, cwd: string, console?: {log:
       });
 
       coqtop.on('close', () => {
-        const ver = /^\s*The (?:Coq Proof Assistant|Rocq Prover), version (.+?)\s/.exec(result);
+        const ver = /^(.+?)\s(.+?)\s/.exec(result);
         // if(!ver)
         //   console.warn('Could not detect coqtop version');
         resolve(!ver ? undefined : ver[1]);
